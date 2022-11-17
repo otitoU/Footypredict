@@ -1,38 +1,268 @@
-.App {
-  text-align: center;
-}
+@media only screen and (max-width: 10000px) {
+  /*Tablets [601px -> 1200px]*/
+  p.loadingpagetext {
+    font-family: "Baskerville Old Face", serif;
+    margin-top: 30px;
+  }
+  .bg-myBlack {
+    background-color: #0b0b0b;
+  }
+  .App {
+    text-align: center;
+  }
+  main {
+    justify-content: space-around;
+  }
+  .right-column {
+    display: flex;
+    margin-right: 100px;
+  }
+  .cancel-btn {
+    height: 30px;
+    color: #f5054f;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 9px;
+    width: 30px;
+    border-radius: 25px;
+  }
+  .display-prediction-column {
+    height: 530px;
+    background-color: #0b0b0b;
+    border-radius: 25px;
+    width: 500px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .display-prediction-column-club-wrapper-header-img,
+  .display-prediction-homelogo,
+  .display-prediction-awaylogo {
+    width: 60px;
+    height: 60px;
+  }
+  .display-prediction-column-club-wrapper-header {
+    width: 100%;
+    height: 70px;
+    margin: 20px 0 0 20px;
+    display: flex;
+  }
+  .display-prediction-column-club-wrapper-body {
+    height: 270px;
+    width: 350px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+    box-shadow: rgba(245, 5, 79, 0.4) 5px 5px, rgba(245, 5, 79, 0.3) 10px 10px,
+      rgba(245, 5, 79, 0.2) 15px 15px, rgba(245, 5, 79, 0.1) 20px 20px,
+      rgba(245, 5, 79, 0.05) 25px 25px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    background-color: #181818;
+    display: flex;
+    margin: 30px 0 0 0;
+  }
+  .display-prediction-home {
+    margin: 30px 0 0 15px;
+  }
+  .display-prediction-away {
+    margin: 30px 30px 0 0;
+  }
+  .display-prediction-column-club-wrapper-body {
+    height: 270px;
+    width: 300px;
+
+    display: flex;
+    margin: 30px 0 0 0;
+  }
+  main,
+  .loading-page {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: #181818;
+    color: aliceblue;
+  }
+  .loading-page {
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+  }
+  .hometeam,
+  .awayteam {
+    display: flex;
+    flex-direction: row;
+  }
+  .section-one {
+    margin-left: 100px;
+    flex-direction: column;
+    display: flex;
+    width: 500px;
+    margin-top: 30px;
+    height: 800px;
+    border-radius: 25px;
+    color: aliceblue;
+    overflow-y: auto;
+    background-color: #0b0b0b;
+  }
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0b0b0b;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f5054f;
+    border-radius: 100px;
+    scrollbar-width: thin;
+  }
+
+  .fixture,
+  .noshowfixture {
+    cursor: pointer;
+    background-color: #181818;
+    width: 470px;
+    height: 60px;
+    margin-top: 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .fichevronright {
+    display: flex;
+    align-self: center;
+  }
+
+  .fixture-time {
+    align-self: center;
+    margin-left: 4px;
+  }
+
+  .fixture-clubs {
+    margin-left: 17px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+  .img {
+    width: 12px;
+    height: 12px;
+    border-radius: 5px;
+    margin-left: 3px;
+  }
+  .teams-img {
+    margin-top: 7px;
+    margin-right: 4px;
+  }
+  .vs {
+    margin: 10px;
+    padding: 30px 10px 0 10px;
+  }
+  .league-properties {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 50px;
+  }
+
+  .country-name {
+    font-size: 11px;
+  }
+  .nameandcountry {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 40px;
+  }
+  #videobcg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: -100;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer-p {
+  width: 200px;
+  margin-top: 30px;
+  background-color: #181818;
 }
+@media only screen and (max-width: 600px) {
+  .section-one {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .fixture {
+    width: 300px;
+  }
+  .noshowfixture {
+    display: none;
+  }
+  .display-prediction-column-club-wrapper-body {
+    height: 240px;
+    width: 230px;
+    margin: 30px 0 0 0;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .display-prediction-homelogo,
+  .display-prediction-awaylogo {
+    width: 40px;
+    height: 40px;
+  }
 
-.App-link {
-  color: #61dafb;
+  .vs {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .display-prediction-home {
+    margin: 15px 0 5px 20px;
+  }
+  .cancel-btn {
+    margin: 9px 0 0 0;
+  }
+  .league-properties {
+    margin-left: 50px;
+    margin-top: 5px;
+    height: 50px;
+  }
+  .display-prediction-column {
+    width: 350px;
+    margin: 20px 0 0 130px;
+  }
+  .display-prediction-home,
+  .display-prediction-away {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .section-one::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .section-one::-webkit-scrollbar-track {
+    background: #0b0b0b;
+  }
+
+  .section-one::-webkit-scrollbar-thumb {
+    background-color: #f5054f;
+    border-radius: 100px;
+    scrollbar-width: thin;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
 }

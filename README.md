@@ -68,3 +68,54 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+import React, { useState } from "react";
+import Fixture from "./Fixture";
+
+// homeLogo, homeName, awayLogo, awayName,
+const SectionOne = ({ predictions }) => {
+const [showInfo, setShowInfo] = useState(false);
+const [fixture, setFixture] = useState({});
+const showAndHideColumn = () => {
+setShowInfo(!showInfo);
+};
+handleLanguage = (langValue) => {
+setFixture({ language: langValue });
+};
+
+return (
+<>
+<section className="section-one">
+{predictions.response.slice(0, 10).map((prediction, index) => {
+return (
+<>
+<div className="league-properties" key={index}>
+<img
+                  src={prediction.league.flag}
+                  alt={prediction.league.name}
+                  className="img"
+                />
+<div className="nameandcountry">
+<h6>{prediction.league.name}</h6>
+<div className="country-name">
+{prediction.league.country}
+</div>
+</div>
+</div>
+<Fixture
+key={prediction.fixture.id}
+{...prediction}
+showAndHideColumn={showAndHideColumn}
+/>
+</>
+);
+})}
+</section>
+{showInfo && (
+<div className="display-prediction-column">fdydbdu {fixture.id}</div>
+)}
+</>
+);
+};
+
+export default SectionOne;
